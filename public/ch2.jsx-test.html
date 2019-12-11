@@ -7,20 +7,18 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
   </head><body>
     <div id="root"></div>
-    <script type="text/babel">
-      ReactDOM.rendender(
-         getDOM(),
-         document.getElementById('root')
-         );
-
-         function getDOM() {
-            return (
-               <div>
-                 <p>探すときがあり</p>
-                 <p>捨てるのに時がある</p>
-               </div>
-              )
-             }
-    </script>
-  </body></html>
-
+  <script type="text/babel">
+    ReactDOM.render(
+      getDOM(),
+      document.getElementById('root')
+    );
+    function getDOM() {
+      return (
+        <div>
+          <p>探すのに時があり</p>
+          <p>捨てるのに時がある</p>
+        </div>
+      )
+    }
+  </script>
+</body></html>

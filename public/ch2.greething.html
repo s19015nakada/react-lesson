@@ -5,22 +5,19 @@
 <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
 <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
-</head>
-<body>
-<div id="disp"></div>
-
-<script type="text/babel">
-  const root = document.querySelector('#disp')
-  const msg = getGreething()
-  ReactDOM.render(msg, root)
-
-  function getGreething () {
-    const r = Math.floor(Math.random() * 3)
-
-    if (r == o) return <p>今日もがんばりましょう。</p>
-    if (r == 1) return <p>こんにちは。</p>
-    if (r == 2) return <p>朗らかな日ですね。</p>
-    }
-</script>
-</body>
-</html>
+</head><body>
+  <div id="root"></div>
+  <script type="text/babel">
+function Greeting(props) {
+  return <h1>{props.type}</h1>
+}
+const dom = <div>
+  <Greeting type="今日もがんばりましょう。" />
+  <Greeting type="こんにちは。" />
+  <Greeting type="朗らかな日ですね。" />
+</div>
+ReactDOM.render(
+  dom,
+  document.getElementById('root'))
+  </script>
+</body></html>
